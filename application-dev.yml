@@ -1,4 +1,24 @@
 username: yangfan-dev
 password: yangfan-dev
-jdbc:
-  host: 127.0.0.1
+spring:
+  #数据库连接配置
+  datasource:
+    name: auth
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/sperm?useUnicode=true&characterEncoding=UTF-8
+    username: admin
+    password: Passw0rd
+
+    dbcp:
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x' from dual
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      min-idle: 1
+      max-wait: 60000
+      initial-size: 1
+      max-active: 20
