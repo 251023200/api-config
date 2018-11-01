@@ -1,0 +1,4 @@
+username: yangfan-dev
+password: yangfan-dev
+jdbc:
+  host: 127.0.0.1
